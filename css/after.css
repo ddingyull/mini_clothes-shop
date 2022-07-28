@@ -1,0 +1,45 @@
+@charset "utf-8";
+:root{
+  /* color */
+  --color-black : #3f454d;
+  --color-white : #fff;
+  --color-blue : #A6D1E6;
+  --color-yellow : #FFC54D;
+  --color-pink : #FF869E;
+  --color-light-grey : #dfdfdf
+}
+
+/* Common */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  /* width: 1000px; */
+  height: 100vh;
+  background-color:var(--color-black);
+}
+.logo{
+  cursor: pointer;
+  transition: transform 3000ms ease;
+  display: block;
+  margin: auto;
+}
+
+.logo:hover{
+  transform: scale(1.1);;
+}
+
+.btn{
+  display: flex;
+}

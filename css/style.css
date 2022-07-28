@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+/* Common */
+:root{
+  /* color */
+  --color-black : #3f454d;
+  --color-white : #fff;
+  --color-blue : #A6D1E6;
+  --color-yellow : #FFC54D;
+  --color-pink : #FF869E;
+  --color-light-grey : #dfdfdf
+
+  /* size */
+  /* base-space를 쓰는데 왜 size-padding이 없으면 안될까.. */
+  --size-padding: 10px;
+  --base-space: 8px;
+  --size-thumbnail: 40px;
+  --size-button:60px;
+  --font-size:18px
+
+  /* annimation */
+  --annimation-duration : 3000ms;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+body{
+  width: 1000px;
+  height: 100vh;
+  margin: auto;
+  background-color:#555;
+}
+
+
+
+/* logo */
+.logo{
+  display: block;
+  margin: auto;
+  padding-top: calc(var(--base-space) * 4);
+  width: calc(var(--size-button) * 1.5);
+  cursor: pointer;
+  transition: transform var(--annimation-duration) ease;
+}
+
+.logo:hover,
+.btn:hover{
+  transform: scale(1.1);
+}
+
+
+
+/* Buttons */
+/* 이전 버전) div자체에 border-radius는 안되고, li에만 적용되는데 그 이유가 무엇인지? */
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding : calc(var(--base-space) * 2)
+}
+
+  /* menu_color */
+.btn{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform var(--annimation-duration) ease;
+  border-radius: 10px;
+  margin-left: calc(var(--base-space) * 6 );
+}
+
+.btn:nth-child(1){
+  margin-left: 0;
+}
+
+.imgBtn{
+  width: var(--size-button);
+  height: var(--size-button);
+}
+
+.btn.colorBtn{
+  font-size: var(--font-size);
+  padding: calc(var(--base-space) * 2);
+}
+
+.btn.blue{
+  background-color: var(--color-blue);
+}
+
+.btn.yellow{
+  background-color: var(--color-yellow);
+}
+.btn.pink{
+  background-color: var(--color-pink);
+}
+
+/* Items */
+.items{
+  margin: auto;
+  width: 60%;
+  height: 60%;
+  /* 화면 전체가 아니라 item에서만 scroll 되도록  */
+  overflow-y: scroll;
+}
+
+.item{
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  padding: var(--base-space);
+  margin-bottom: var(--base-space);
+}
+
+.item .item_thumbnail{
+  width: var(--size-thumbnail);
+  height: var(--size-thumbnail);
+}
+
+.item_description{
+  margin-left: var(--base-space);
+  font-size: var(--font-size);
+}
